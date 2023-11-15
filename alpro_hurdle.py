@@ -57,3 +57,25 @@ while not at_goal():
         move()
     elif wall_in_front():
         vertical_pass()
+
+#Hurdle 3
+def turn_right():
+    for i in range(3):
+        turn_left()
+        
+def serong_kiri()
+    move()
+    turn_left()
+    
+def vertical_pass():
+    turn_left()
+    for i in range(2):
+        move()
+        turn_right()
+    serong_kiri()
+    
+while not at_goal():
+    if front_is_clear():
+        move()
+    elif wall_in_front():
+        vertical_pass()
