@@ -52,3 +52,8 @@ def vertical_pass():
         turn_right()
     move()
     turn_left()
+while not at_goal():
+    if front_is_clear():
+        move()
+    elif wall_in_front():
+        vertical_pass()
