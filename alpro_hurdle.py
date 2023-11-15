@@ -79,3 +79,31 @@ while not at_goal():
         move()
     elif wall_in_front():
         vertical_pass()
+
+#Hurdle 4
+def turn_right():
+    for i in range(3):
+        turn_left()
+
+def manuver():
+    turn_right()
+    move()
+    turn_right()
+    
+def pass_obstacle():
+    turn_left()
+    count_wall = 0
+    while wall_on_right():
+        count_wall += 1
+        move()
+    manuver()
+    while count_wall >0:
+        move()
+        count_wall -= 1
+    turn_left()
+    
+while not at_goal():
+    if front_is_clear():
+        move()
+    elif wall_in_front():
+        pass_obstacle()
